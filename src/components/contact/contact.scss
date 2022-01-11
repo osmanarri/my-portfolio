@@ -1,0 +1,103 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: #b9b49e;
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+  display: flex;
+  
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    h1 {
+      font-size: 30px;
+      color:#3b392e;
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      box-shadow: 0px 0px 20px #00000030;
+      border-radius: 10px;
+      padding-top: 10px;
+
+      textarea{
+        resize: vertical;
+      }
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        border-radius: 5px;
+
+        @include mobile {
+          width: 200px;
+          height: 20px;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+        border-radius: 5px;
+
+
+        @include mobile {
+          width: 200px;
+          height: 100px;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 40px;
+        color:#3b392e;
+        background-color: #7c796a;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 2px;
+
+        &:hover{
+          background-color: #5f5d53;
+          color:#beb997;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+       .message{
+         color: rgb(9, 12, 12);        
+         padding: 10px;
+         border-radius: 10px;
+       }
+       
+    }
+  }
+}

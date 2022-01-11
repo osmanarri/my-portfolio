@@ -1,0 +1,28 @@
+@import "../../global.scss";
+
+.projectList {
+  font-size: 20px;
+  font-weight: 450;
+  margin-right: 50px;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #e1d3d1;
+    color: #58838a;
+    opacity: 0.4;
+  }
+  
+
+  @include mobile{
+    margin-right: 20px;
+  }
+
+  &.active {
+    background-color: #e1d3d1;
+    color: #58838a;
+    font-size: 20px;
+    
+  }
+}

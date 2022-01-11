@@ -1,0 +1,120 @@
+@import "../../global.scss";
+
+.project {
+  color: #e1d3d1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:url("https://www.transparenttextures.com/patterns/xv.png");
+ 
+  background: linear-gradient(to top, #d6d0b8 0%, #58838a 100%);
+  
+
+  h1 {
+    
+    font-size: 50px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    @include mobile{
+      font-size: 20px;
+    }
+  }
+
+  ul {
+    
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    @include mobile{
+      margin: 10px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+    @include mobile{
+      width: 100%;
+    }
+
+    .item {
+      
+      color: transparent;
+      width: 350px;
+      height: 200px;     
+      border-radius: 5px;
+      box-shadow: 0px 0px 15px -8px black;
+      margin: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;      
+      position: relative;      
+      cursor: pointer;
+      transition: 1s;
+      
+
+      &.featured{
+        width: 200px;
+       height: 380px;
+       border-radius: 25px;
+       overflow: hidden; /* Hide scrollbars */
+
+       img {
+         
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+      
+      }
+
+      &:hover{
+        transform:scale(1.05);
+        color: yellow;      
+        -webkit-text-stroke: 1px rgb(170, 25, 25);
+        
+      }    
+
+
+      @include mobile{
+        width: 130px;
+        height: 100px;
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 20px;
+      }
+
+      img {
+       
+        z-index: 1;
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+       
+      }
+
+      &:hover {
+        background-color: #e1d3d1;
+        
+        
+        img {         
+          
+          z-index: 0;
+          
+        }
+      }
+    }    
+    
+  }
+}
